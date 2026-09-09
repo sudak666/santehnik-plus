@@ -15,7 +15,10 @@
   --font-display: 'Space Grotesk', 'Manrope', system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
 html { scroll-behavior: smooth; }
 
