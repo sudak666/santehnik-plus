@@ -548,7 +548,7 @@ a { color: inherit; text-decoration: none; }
   gap: 48px;
   align-items: start;
 }
-.contacts__info h2 { font-size: 30px; margin: 0 0 12px; }
+.contacts__info h2 { font-size: 32px; margin: 0 0 12px; }
 .contacts__info p { color: var(--ink-soft); margin: 0 0 24px; }
 .contacts__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
 .contacts__list li { display: flex; align-items: center; gap: 12px; font-weight: 600; }
@@ -634,7 +634,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   overflow: hidden;
   background: linear-gradient(120deg, var(--ink) 0%, #1a2340 100%);
-  padding: 56px 0;
+  padding: 72px 0;
 }
 .cta-band__blob {
   position: absolute;
@@ -704,6 +704,16 @@ a { color: inherit; text-decoration: none; }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .hero__blob,
+  .hero__art-main,
+  .stamp,
+  .stamp__center,
+  .master__badge,
+  .faucet__drop,
+  .faucet__ripple,
+  .cta-band__blob {
+    animation: none !important;
+  }
 }
 
 /* Floating contact menu (mobile) */
@@ -762,12 +772,15 @@ a { color: inherit; text-decoration: none; }
   .master__facts li { text-align: left; }
 }
 
-@media (max-width: 720px) {
-  .nav { position: fixed; inset: 76px 0 auto 0; background: #fff; flex-direction: column; padding: 16px 24px; gap: 4px; border-bottom: 1px solid var(--border); transform: translateY(-130%); opacity: 0; transition: transform .2s ease, opacity .2s ease; }
+@media (max-width: 1240px) {
+  .nav { position: fixed; inset: 76px 0 auto 0; background: #fff; flex-direction: column; padding: 16px 24px; gap: 4px; border-bottom: 1px solid var(--border); box-shadow: 0 16px 30px -20px rgba(12,19,36,0.3); transform: translateY(-130%); opacity: 0; transition: transform .2s ease, opacity .2s ease; z-index: 49; }
   .nav.open { transform: translateY(0); opacity: 1; }
   .nav a { padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .header__phone { display: none; }
   .burger { display: flex; }
+}
+
+@media (max-width: 720px) {
+  .header__phone { display: none; }
   .hero h1 { font-size: 32px; }
   .hero__stats { gap: 22px; }
   .grid--services, .grid--prices, .grid--reviews, .grid--adv { grid-template-columns: 1fr; }
