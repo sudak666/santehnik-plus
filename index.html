@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сантехнік Плюс — Максим, сантехнік з 25+ роками досвіду</title>
+<meta name="description" content="Сантехнік Максим у Солом'янському районі Києва: усунення протікань, монтаж сантехніки, чистка труб, установка бойлерів. Виїзд протягом години, гарантія на роботи.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 9.5 6 14a6 6 0 0012 0c0-4.5-6-12-6-12z" fill="currentColor"/></svg>
+      </span>
+      Сантехнік&nbsp;Плюс
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#master">Майстер</a>
+      <a href="#services">Послуги</a>
+      <a href="#prices">Ціни</a>
+      <a href="#advantages">Переваги</a>
+      <a href="#portfolio">Приклад роботи</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <div class="header__contacts">
+      <a href="#" data-contact="telegram" target="_blank" rel="noopener" class="icon-btn icon-btn--telegram" aria-label="Написати в Telegram" title="Telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21.5 4.5L2.8 11.7c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.4c.3.9 1.4 1.1 2 .4l2.5-2.7 4.6 3.4c.8.6 1.9.2 2.1-.8l3-14.4c.3-1.3-1-2-2.3-1.9z" fill="currentColor"/></svg>
+      </a>
+      <a href="#" data-contact="viber" class="icon-btn icon-btn--viber" aria-label="Написати в Viber" title="Viber">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12.1 2C7 2 3.4 5.3 3.4 10c0 2.6 1.2 4.9 3.2 6.5l-.3 3.3c0 .4.4.6.7.4l3-1.6c.7.2 1.4.3 2.1.3 5.1 0 8.7-3.3 8.7-8 0-4.6-3.6-8.9-8.7-8.9z" fill="currentColor"/></svg>
+      </a>
+      <a href="#" data-contact="tel" class="header__phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        <span data-contact="tel-text">+38 (000) 123-45-67</span>
+      </a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--3" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <span class="badge">Пн–Нд, 9:00–20:00 • Аварійний виклик — окремо</span>
+      <h1>Сантехнік, якому можна <span class="gradient-word">довіряти</span></h1>
+      <p>Мене звати Максим — усуваю протікання, чищу труби, встановлюю бойлери, змішувачі та сантехніку будь-якої складності. Приїжджаю швидко, працюю акуратно, даю гарантію.</p>
+      <div class="hero__cta">
+        <a href="tel:+380001234567" class="btn btn--primary">Викликати сантехніка</a>
+        <a href="#prices" class="btn btn--ghost">Дивитись ціни</a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong>25+</strong><span>років досвіду</span></li>
+        <li><strong>4800+</strong><span>виконаних викликів</span></li>
+        <li><strong>30&nbsp;хв</strong><span>середній виїзд по району</span></li>
+      </ul>
+    </div>
+    <div class="hero__art">
+      <svg class="hero__art-main" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <circle cx="200" cy="200" r="170" fill="url(#g1)"/>
+        <path d="M200 90c0 0-70 90-70 140a70 70 0 00140 0c0-50-70-140-70-140z" fill="#fff" fill-opacity="0.95"/>
+        <circle cx="200" cy="235" r="26" fill="#ff7a45"/>
+        <defs>
+          <linearGradient id="g1" x1="30" y1="30" x2="370" y2="370" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0b6cf0"/>
+            <stop offset="0.55" stop-color="#7a4bf0"/>
+            <stop offset="1" stop-color="#ff7a45"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="stamp" aria-hidden="true">
+        <svg class="stamp__ring" viewBox="0 0 120 120">
+          <defs>
+            <path id="stampCircle" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/>
+          </defs>
+          <text font-size="12.3" font-weight="700" letter-spacing="2.4" fill="#fff">
+            <textPath href="#stampCircle" startOffset="0%">• ГАРАНТІЯ • ШВИДКО • ЯКІСНО •</textPath>
+          </text>
+        </svg>
+        <span class="stamp__center">25+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="container strip__inner">
+    <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/></svg> Гарантія до 2 років</div>
+    <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/></svg> Фіксована ціна одразу</div>
+    <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/></svg> Чистота і акуратність</div>
+    <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/></svg> Аварійний виклик — окремо</div>
+  </div>
+</section>
+
+<section class="section master" id="master">
+  <div class="container master__inner">
+    <div class="master__art" aria-hidden="true">
+      <div class="master__avatar">
+        <div class="master__avatar-frame">
+          <img src="images/master-photo.jpg" alt="Максим — сантехнік" width="180" height="180">
+        </div>
+        <span class="master__badge" title="Розвідний ключ — інструмент №1">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5a5 5 0 00-6.8 6.8L4 20l0 0a1.4 1.4 0 002 2l9.7-9.7a5 5 0 006.8-6.8l-3 3-2-2 3-3z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </span>
+      </div>
+      <div class="faucet" aria-hidden="true">
+        <svg width="70" height="60" viewBox="0 0 70 60" fill="none">
+          <path d="M6 14h30a8 8 0 018 8v4" stroke="#94a3c4" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="10" cy="14" r="7" fill="#c3cfe6"/>
+        </svg>
+        <span class="faucet__drop"></span>
+        <span class="faucet__ripple"></span>
+      </div>
+    </div>
+    <div class="master__info">
+      <span class="eyebrow">Ваш майстер</span>
+      <h2>Максим — <span class="gradient-word">25+ років</span> практичного досвіду</h2>
+      <p>Працюю в Солом'янському районі Києва — особисто виїжджаю на кожен виклик, без посередників і випадкових людей. За чверть століття в сантехніці бачив усе: від краплі з крана до аварії в новобудові.</p>
+      <ul class="master__facts">
+        <li>
+          <span class="master__fact-icon master__fact-icon--blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div><strong>Пн–Нд, 9:00–20:00</strong><span>звичайний графік роботи</span></div>
+        </li>
+        <li>
+          <span class="master__fact-icon master__fact-icon--orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3l9-16z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="0.9" fill="currentColor"/></svg>
+          </span>
+          <div><strong>Аварійний виклик поза графіком</strong><span>умови узгоджуються окремо за дзвінком</span></div>
+        </li>
+        <li>
+          <span class="master__fact-icon master__fact-icon--purple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </span>
+          <div><strong>Свій інструмент і запчастини</strong><span>виїжджаю готовим вирішити проблему одразу</span></div>
+        </li>
+      </ul>
+      <a href="#" data-contact="tel" class="btn btn--primary">Зателефонувати Максиму</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Послуги</span>
+      <h2>Чим можемо допомогти</h2>
+      <p>Виконуємо як термінові виклики, так і планові роботи — від заміни прокладки до повного монтажу сантехніки в квартирі.</p>
+    </div>
+    <div class="grid grid--services">
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 8h9a4 4 0 014 4v1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="4" cy="8" r="2.3" stroke="currentColor" stroke-width="1.8"/><path d="M17.2 15c0 1.5-1.2 2.7-2.6 2.7s-2.6-1.2-2.6-2.7c0-1.4 2.6-4.3 2.6-4.3s2.6 2.9 2.6 4.3z" fill="currentColor"/></svg></div>
+        <h3>Усунення протікань</h3>
+        <p>Знаходимо і усуваємо течі труб, кранів, змішувачів та стояків без зайвих руйнувань.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 5.5v3M12 15.5v3M5.5 12h3M15.5 12h3M8 8l2 2M14 14l2 2M8 16l2-2M14 10l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Чистка каналізації</h3>
+        <p>Прочищаємо засмічені труби механічним та гідродинамічним способом.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="7.5" r="1.1" fill="currentColor"/><path d="M12.5 11.5l-2 3.6h3l-2 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Встановлення бойлерів</h3>
+        <p>Монтаж, підключення та обслуговування водонагрівачів будь-яких брендів.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 20V10.5a4 4 0 014-4h5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 20h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="16" y="4.3" width="4.5" height="3.2" rx="1.4" fill="currentColor"/><circle cx="8" cy="10.5" r="1.5" fill="currentColor"/></svg></div>
+        <h3>Заміна змішувачів і кранів</h3>
+        <p>Демонтаж старої та встановлення нової арматури з перевіркою герметичності.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 13h18v2a5 5 0 01-5 5H8a5 5 0 01-5-5v-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5.5 13V9a2 2 0 012-2h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="7.5" cy="6.3" r="1.1" fill="currentColor"/></svg></div>
+        <h3>Монтаж сантехніки під ключ</h3>
+        <p>Розводка труб, встановлення унітазів, ванн, душових кабін у новобудові чи після ремонту.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3L2 20h20L12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9.5v4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.8" r="1.1" fill="currentColor"/></svg></div>
+        <h3>Аварійний виїзд</h3>
+        <p>Прорив труби чи потоп? Приїдемо якнайшвидше і зупинимо аварію.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted" id="prices">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Ціни</span>
+      <h2>Прозорі тарифи без прихованих доплат</h2>
+      <p>Точну вартість назвемо після огляду, орієнтовні ціни — нижче.</p>
+    </div>
+    <div class="grid grid--prices">
+      <div class="price">
+        <h3>Діагностика та виїзд</h3>
+        <div class="price__value">від 250&nbsp;грн</div>
+        <ul>
+          <li>Виїзд майстра по району</li>
+          <li>Огляд та діагностика</li>
+          <li>Кошторис робіт</li>
+        </ul>
+      </div>
+      <div class="price price--accent">
+        <span class="price__tag">Популярне</span>
+        <h3>Усунення протікання</h3>
+        <div class="price__value">від 450&nbsp;грн</div>
+        <ul>
+          <li>Заміна прокладок/картриджів</li>
+          <li>Герметизація з'єднань</li>
+          <li>Гарантія 12 місяців</li>
+        </ul>
+      </div>
+      <div class="price">
+        <h3>Встановлення бойлера</h3>
+        <div class="price__value">від 900&nbsp;грн</div>
+        <ul>
+          <li>Монтаж і підключення</li>
+          <li>Перевірка тиску</li>
+          <li>Гарантія 24 місяці</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="advantages">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Переваги</span>
+      <h2>Чому обирають нас</h2>
+    </div>
+    <div class="grid grid--adv">
+      <div class="adv">
+        <span class="adv__num">01</span>
+        <h3>25+ років практики</h3>
+        <p>Максим особисто виконує кожен виклик — жодних стажерів чи субпідрядників.</p>
+      </div>
+      <div class="adv">
+        <span class="adv__num">02</span>
+        <h3>Фіксована вартість</h3>
+        <p>Озвучуємо ціну до початку робіт — жодних сюрпризів у чеку.</p>
+      </div>
+      <div class="adv">
+        <span class="adv__num">03</span>
+        <h3>Власні інструменти</h3>
+        <p>Виїжджаємо з повним набором обладнання для вирішення проблеми одразу.</p>
+      </div>
+      <div class="adv">
+        <span class="adv__num">04</span>
+        <h3>Гарантія на роботи</h3>
+        <p>Надаємо офіційну гарантію до 24 місяців на виконані послуги.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Приклад роботи</span>
+      <h2>Подивіться, як я працюю</h2>
+      <p>Коротке відео з реального виклику — від діагностики до готового результату.</p>
+    </div>
+    <div class="video-frame">
+      <video controls preload="metadata" poster="video/poster.jpg">
+        <source src="video/example-robota.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео. <a href="video/example-robota.mp4">Завантажити відео</a>.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted" id="reviews">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Відгуки</span>
+      <h2>Що кажуть клієнти</h2>
+    </div>
+    <div class="grid grid--reviews">
+      <div class="review">
+        <div class="review__stars">★★★★★</div>
+        <p>«Приїхали протягом 40 хвилин, швидко знайшли причину протікання і все полагодили. Ціна відповідала озвученій».</p>
+        <div class="review__author">Олена, Солом'янка</div>
+      </div>
+      <div class="review">
+        <div class="review__stars">★★★★★</div>
+        <p>«Встановили бойлер акуратно, все пояснили, прибрали за собою. Рекомендую!»</p>
+        <div class="review__author">Андрій, Караваєві Дачі</div>
+      </div>
+      <div class="review">
+        <div class="review__stars">★★★★★</div>
+        <p>«Викликали вночі через прорив труби — приїхали за годину і врятували ситуацію».</p>
+        <div class="review__author">Марина, Чоколівка</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacts">
+  <div class="container contacts">
+    <div class="contacts__info">
+      <span class="eyebrow">Контакти</span>
+      <h2>Замовте виклик сантехніка</h2>
+      <p>Залиште заявку — передзвонимо протягом 10 хвилин і узгодимо зручний час візиту.</p>
+      <ul class="contacts__list">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+          <a href="#" data-contact="tel"><span data-contact="tel-text">+38 (000) 123-45-67</span></a>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 4.5L2.8 11.7c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.4c.3.9 1.4 1.1 2 .4l2.5-2.7 4.6 3.4c.8.6 1.9.2 2.1-.8l3-14.4c.3-1.3-1-2-2.3-1.9z" fill="currentColor"/></svg>
+          <a href="#" data-contact="telegram" target="_blank" rel="noopener">Telegram: <span data-contact="telegram-text">@santehnik_plus</span></a>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.1 2C7 2 3.4 5.3 3.4 10c0 2.6 1.2 4.9 3.2 6.5l-.3 3.3c0 .4.4.6.7.4l3-1.6c.7.2 1.4.3 2.1.3 5.1 0 8.7-3.3 8.7-8 0-4.6-3.6-8.9-8.7-8.9z" fill="currentColor"/></svg>
+          <a href="#" data-contact="viber">Viber: <span data-contact="tel-text">+38 (000) 123-45-67</span></a>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg>
+          <a href="#" data-contact="email">info@santehnik-plus.ua</a>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-7.2-7-12a7 7 0 1114 0c0 4.8-7 12-7 12z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span>Київ, Солом'янський район • Пн–Нд, 9:00–20:00 (аварійний виклик — окремо)</span>
+        </li>
+      </ul>
+    </div>
+    <form class="form" id="callForm">
+      <h3>Заявка на виклик</h3>
+      <label>
+        Ім'я
+        <input type="text" name="name" placeholder="Ваше ім'я" required>
+      </label>
+      <label>
+        Телефон
+        <input type="tel" name="phone" placeholder="+38 (0__) ___-__-__" required>
+      </label>
+      <label>
+        Опишіть проблему
+        <textarea name="message" placeholder="Наприклад: тече кран на кухні" rows="3"></textarea>
+      </label>
+      <p class="form__label">Обрати спосіб зв'язку</p>
+      <div class="channel-buttons">
+        <button type="button" class="channel-btn channel-btn--tel" data-channel="tel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+          Дзвінок
+        </button>
+        <button type="button" class="channel-btn channel-btn--telegram" data-channel="telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 4.5L2.8 11.7c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.4c.3.9 1.4 1.1 2 .4l2.5-2.7 4.6 3.4c.8.6 1.9.2 2.1-.8l3-14.4c.3-1.3-1-2-2.3-1.9z" fill="currentColor"/></svg>
+          Telegram
+        </button>
+        <button type="button" class="channel-btn channel-btn--viber" data-channel="viber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.1 2C7 2 3.4 5.3 3.4 10c0 2.6 1.2 4.9 3.2 6.5l-.3 3.3c0 .4.4.6.7.4l3-1.6c.7.2 1.4.3 2.1.3 5.1 0 8.7-3.3 8.7-8 0-4.6-3.6-8.9-8.7-8.9z" fill="currentColor"/></svg>
+          Viber
+        </button>
+        <button type="button" class="channel-btn channel-btn--email" data-channel="email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg>
+          Email
+        </button>
+      </div>
+      <p class="form__note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Сантехнік Плюс. Усі права захищені.</span>
+    <a href="#" data-contact="tel"><span data-contact="tel-text">+38 (000) 123-45-67</span></a>
+  </div>
+</footer>
+
+<div class="fab-menu" id="fabMenu">
+  <a href="#" data-contact="email" class="fab fab--mini fab--email" aria-label="Написати на email">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg>
+  </a>
+  <a href="#" data-contact="viber" class="fab fab--mini fab--viber" aria-label="Написати в Viber">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.1 2C7 2 3.4 5.3 3.4 10c0 2.6 1.2 4.9 3.2 6.5l-.3 3.3c0 .4.4.6.7.4l3-1.6c.7.2 1.4.3 2.1.3 5.1 0 8.7-3.3 8.7-8 0-4.6-3.6-8.9-8.7-8.9z" fill="currentColor"/></svg>
+  </a>
+  <a href="#" data-contact="telegram" target="_blank" rel="noopener" class="fab fab--mini fab--telegram" aria-label="Написати в Telegram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 4.5L2.8 11.7c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.4c.3.9 1.4 1.1 2 .4l2.5-2.7 4.6 3.4c.8.6 1.9.2 2.1-.8l3-14.4c.3-1.3-1-2-2.3-1.9z" fill="currentColor"/></svg>
+  </a>
+  <button type="button" class="fab fab--toggle" id="fabToggle" aria-label="Зв'язатися з нами">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
