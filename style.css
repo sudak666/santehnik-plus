@@ -497,15 +497,15 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   display: block;
   margin-bottom: 8px;
-  background: linear-gradient(120deg, var(--blue), var(--purple));
+  background-image: linear-gradient(120deg, var(--blue), var(--purple));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   opacity: 0.45;
 }
-.adv:nth-child(2) .adv__num { background: linear-gradient(120deg, var(--purple), var(--pink)); }
-.adv:nth-child(3) .adv__num { background: linear-gradient(120deg, var(--teal), var(--blue)); }
-.adv:nth-child(4) .adv__num { background: linear-gradient(120deg, var(--orange), var(--pink)); }
+.adv:nth-child(2) .adv__num { background-image: linear-gradient(120deg, var(--purple), var(--pink)); }
+.adv:nth-child(3) .adv__num { background-image: linear-gradient(120deg, var(--teal), var(--blue)); }
+.adv:nth-child(4) .adv__num { background-image: linear-gradient(120deg, var(--orange), var(--pink)); }
 .adv h3 { margin: 0 0 8px; font-size: 17px; }
 .adv p { margin: 0; color: var(--ink-soft); font-size: 14.5px; }
 
