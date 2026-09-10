@@ -51,6 +51,7 @@ collections:
               - {label: "Текст у блоці «Переваги» (перша картка)", name: "advantage_text", widget: "text"}
               - {label: "Текст у темному блоці-заклику", name: "cta_text", widget: "text"}
               - {label: "Рядок з адресою/графіком у розділі «Контакти»", name: "location_line", widget: "string"}
+              - {label: "Привітання у спливаючій бульбашці чату", name: "chat_greeting", widget: "string"}
 
           - label: "Ціни на послуги"
             name: "prices"

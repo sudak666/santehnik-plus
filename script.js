@@ -45,6 +45,8 @@ fetch('content/site.json')
     if (site.master_photo) {
       const img = document.getElementById('masterPhotoImg');
       if (img) img.src = site.master_photo;
+      const bubbleImg = document.getElementById('chatBubbleAvatar');
+      if (bubbleImg) bubbleImg.src = site.master_photo;
     }
 
     if (site.portfolio_video) {
@@ -73,6 +75,8 @@ fetch('content/site.json')
       setText('advantageText', m.advantage_text);
       setText('ctaText', m.cta_text);
       setText('contactsLocationLine', m.location_line);
+      setText('chatBubbleName', m.name);
+      setText('chatBubbleText', m.chat_greeting);
     }
 
     if (Array.isArray(site.prices) && site.prices.length) {
@@ -115,6 +119,29 @@ fetch('content/site.json')
     }
   })
   .catch(() => {}); // JSON недоступний — лишаємо вміст за замовчуванням з HTML
+
+/* Проактивна бульбашка чату — з'являється один раз за сесію */
+const chatBubble = document.getElementById('chatBubble');
+const chatBubbleClose = document.getElementById('chatBubbleClose');
+if (chatBubble && chatBubbleClose) {
+  const DISMISS_KEY = 'chatBubbleDismissed';
+  if (!sessionStorage.getItem(DISMISS_KEY)) {
+    setTimeout(() => {
+      chatBubble.hidden = false;
+      chatBubble.classList.add('is-visible');
+    }, 4000);
+  }
+  const dismiss = () => {
+    chatBubble.classList.remove('is-visible');
+    chatBubble.hidden = true;
+    sessionStorage.setItem(DISMISS_KEY, '1');
+  };
+  chatBubbleClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    dismiss();
+  });
+  chatBubble.querySelector('.chat-bubble__link').addEventListener('click', dismiss);
+}
 
 /* Мобільне меню */
 const burger = document.getElementById('burger');
