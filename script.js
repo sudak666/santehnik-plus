@@ -10,6 +10,43 @@ const CONTACT = {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* Ціни, фото майстра і відео — підвантажуються з content/site.json,
+   яким керує адмін-панель на /admin (без потреби редагувати код) */
+fetch('content/site.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(site => {
+    if (!site) return;
+
+    if (site.master_photo) {
+      const img = document.getElementById('masterPhotoImg');
+      if (img) img.src = site.master_photo;
+    }
+
+    if (site.portfolio_video) {
+      const source = document.getElementById('portfolioVideoSource');
+      const video = document.getElementById('portfolioVideo');
+      const link = document.getElementById('portfolioVideoLink');
+      if (source) source.src = site.portfolio_video;
+      if (link) link.href = site.portfolio_video;
+      if (video) video.load();
+    }
+
+    if (Array.isArray(site.prices) && site.prices.length) {
+      const grid = document.getElementById('pricesGrid');
+      if (grid) {
+        grid.innerHTML = site.prices.map(p => `
+          <div class="price${p.accent ? ' price--accent' : ''}">
+            ${p.tag ? `<span class="price__tag">${p.tag}</span>` : ''}
+            <h3>${p.title}</h3>
+            <div class="price__value">${p.value}</div>
+            <ul>${(p.items || []).map(i => `<li>${i}</li>`).join('')}</ul>
+          </div>
+        `).join('');
+      }
+    }
+  })
+  .catch(() => {}); // JSON недоступний — лишаємо вміст за замовчуванням з HTML
+
 document.querySelectorAll('[data-contact="tel"]').forEach(el => el.href = `tel:${CONTACT.phone}`);
 document.querySelectorAll('[data-contact="tel-text"]').forEach(el => el.textContent = CONTACT.phoneDisplay);
 document.querySelectorAll('[data-contact="email"]').forEach(el => el.href = `mailto:${CONTACT.email}`);

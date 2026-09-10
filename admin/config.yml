@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+locale: "uk"
+
+collections:
+  - name: "settings"
+    label: "Сайт"
+    files:
+      - file: "content/site.json"
+        label: "Ціни, фото та відео"
+        name: "site"
+        fields:
+          - label: "Фото майстра"
+            name: "master_photo"
+            widget: "image"
+            hint: "Найкраще квадратне фото, обличчя ближче до центру."
+          - label: "Відео прикладу роботи"
+            name: "portfolio_video"
+            widget: "file"
+            media_folder: "/video"
+            public_folder: "/video"
+            hint: "Короткий відеоролик (mp4) з прикладом виконаної роботи."
+          - label: "Ціни на послуги"
+            name: "prices"
+            widget: "list"
+            summary: "{{title}} — {{value}}"
+            fields:
+              - {label: "Назва послуги", name: "title", widget: "string"}
+              - {label: "Ціна (текстом, напр. 'від 450 грн')", name: "value", widget: "string"}
+              - {label: "Позначка (напр. 'Популярне')", name: "tag", widget: "string", required: false, default: ""}
+              - {label: "Виділити рамкою", name: "accent", widget: "boolean", default: false}
+              - label: "Що входить"
+                name: "items"
+                widget: "list"
+                field: {label: "Пункт", name: "item", widget: "string"}

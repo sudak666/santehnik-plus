@@ -120,7 +120,7 @@
     <div class="master__art" aria-hidden="true">
       <div class="master__avatar">
         <div class="master__avatar-frame">
-          <img src="images/master-photo.jpg" alt="Максим — сантехнік" width="180" height="180">
+          <img id="masterPhotoImg" src="images/master-photo.jpg" alt="Максим — сантехнік" width="180" height="180">
         </div>
         <span class="master__badge" title="Розвідний ключ — інструмент №1">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5a5 5 0 00-6.8 6.8L4 20l0 0a1.4 1.4 0 002 2l9.7-9.7a5 5 0 006.8-6.8l-3 3-2-2 3-3z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
@@ -213,7 +213,7 @@
       <h2>Прозорі тарифи без прихованих доплат</h2>
       <p>Точну вартість назвемо після огляду, орієнтовні ціни — нижче.</p>
     </div>
-    <div class="grid grid--prices">
+    <div class="grid grid--prices" id="pricesGrid">
       <div class="price">
         <h3>Діагностика та виїзд</h3>
         <div class="price__value">від 250&nbsp;грн</div>
@@ -285,9 +285,9 @@
       <p>Коротке відео з реального виклику — від діагностики до готового результату.</p>
     </div>
     <div class="video-frame">
-      <video controls preload="metadata">
-        <source src="video/video_2026-09-09_15-51-47.mp4" type="video/mp4">
-        Ваш браузер не підтримує відео. <a href="video/video_2026-09-09_15-51-47.mp4">Завантажити відео</a>.
+      <video id="portfolioVideo" controls preload="metadata">
+        <source id="portfolioVideoSource" src="video/video_2026-09-09_15-51-47.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео. <a id="portfolioVideoLink" href="video/video_2026-09-09_15-51-47.mp4">Завантажити відео</a>.
       </video>
     </div>
   </div>
