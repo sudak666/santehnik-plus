@@ -1,4 +1,4 @@
-/* ==== Контактні дані компанії — редагуйте тільки тут ==== */
+/* ==== Контактні дані компанії — типові значення, поки не завантажився content/site.json ==== */
 const CONTACT = {
   phone: '+380001234567',
   phoneDisplay: '+38 (000) 123-45-67',
@@ -6,16 +6,41 @@ const CONTACT = {
   viber: '380001234567',        // номер Viber, тільки цифри, з кодом країни, без +
   email: 'info@santehnik-plus.ua',
 };
-/* ========================================================= */
+/* ============================================================================================ */
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* Ціни, фото майстра і відео — підвантажуються з content/site.json,
-   яким керує адмін-панель на /admin (без потреби редагувати код) */
+function applyContact() {
+  document.querySelectorAll('[data-contact="tel"]').forEach(el => el.href = `tel:${CONTACT.phone}`);
+  document.querySelectorAll('[data-contact="tel-text"]').forEach(el => el.textContent = CONTACT.phoneDisplay);
+  document.querySelectorAll('[data-contact="email"]').forEach(el => el.href = `mailto:${CONTACT.email}`);
+  document.querySelectorAll('[data-contact="telegram-text"]').forEach(el => el.textContent = `@${CONTACT.telegram}`);
+  document.querySelectorAll('[data-contact="telegram"]').forEach(el => {
+    el.href = `https://t.me/${CONTACT.telegram}?text=${encodeURIComponent("Вітаю! Хочу замовити виклик сантехніка.")}`;
+  });
+  document.querySelectorAll('[data-contact="viber"]').forEach(el => {
+    el.href = `viber://chat?number=%2B${CONTACT.viber}`;
+  });
+}
+applyContact();
+
+/* Ціни, контакти, дані майстра, відгуки, FAQ, фото і відео — підвантажуються
+   з content/site.json, яким керує адмін-панель на /admin (без потреби редагувати код) */
 fetch('content/site.json')
   .then(r => r.ok ? r.json() : null)
   .then(site => {
     if (!site) return;
+
+    if (site.contact) {
+      Object.assign(CONTACT, {
+        phone: site.contact.phone || CONTACT.phone,
+        phoneDisplay: site.contact.phone_display || CONTACT.phoneDisplay,
+        telegram: site.contact.telegram || CONTACT.telegram,
+        viber: site.contact.viber || CONTACT.viber,
+        email: site.contact.email || CONTACT.email,
+      });
+      applyContact();
+    }
 
     if (site.master_photo) {
       const img = document.getElementById('masterPhotoImg');
@@ -31,6 +56,25 @@ fetch('content/site.json')
       if (video) video.load();
     }
 
+    if (site.master) {
+      const m = site.master;
+      const setText = (id, val) => {
+        if (!val) return;
+        const el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+      setText('heroBadge', m.hero_badge);
+      setText('heroIntro', m.hero_intro);
+      setText('masterName', m.name);
+      setText('masterYears', m.experience_years);
+      setText('masterBio', m.bio);
+      setText('masterScheduleLine', m.schedule_line);
+      setText('masterCallBtnText', m.call_button_text);
+      setText('advantageText', m.advantage_text);
+      setText('ctaText', m.cta_text);
+      setText('contactsLocationLine', m.location_line);
+    }
+
     if (Array.isArray(site.prices) && site.prices.length) {
       const grid = document.getElementById('pricesGrid');
       if (grid) {
@@ -44,19 +88,33 @@ fetch('content/site.json')
         `).join('');
       }
     }
+
+    if (Array.isArray(site.reviews) && site.reviews.length) {
+      const grid = document.getElementById('reviewsGrid');
+      if (grid) {
+        grid.innerHTML = site.reviews.map(r => `
+          <div class="review">
+            <div class="review__stars">★★★★★</div>
+            <p>${r.text}</p>
+            <div class="review__author">${r.author}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    if (Array.isArray(site.faq) && site.faq.length) {
+      const list = document.getElementById('faqList');
+      if (list) {
+        list.innerHTML = site.faq.map((f, i) => `
+          <details class="faq__item"${i === 0 ? ' open' : ''}>
+            <summary>${f.question}</summary>
+            <p>${f.answer}</p>
+          </details>
+        `).join('');
+      }
+    }
   })
   .catch(() => {}); // JSON недоступний — лишаємо вміст за замовчуванням з HTML
-
-document.querySelectorAll('[data-contact="tel"]').forEach(el => el.href = `tel:${CONTACT.phone}`);
-document.querySelectorAll('[data-contact="tel-text"]').forEach(el => el.textContent = CONTACT.phoneDisplay);
-document.querySelectorAll('[data-contact="email"]').forEach(el => el.href = `mailto:${CONTACT.email}`);
-document.querySelectorAll('[data-contact="telegram-text"]').forEach(el => el.textContent = `@${CONTACT.telegram}`);
-document.querySelectorAll('[data-contact="telegram"]').forEach(el => {
-  el.href = `https://t.me/${CONTACT.telegram}?text=${encodeURIComponent("Вітаю! Хочу замовити виклик сантехніка.")}`;
-});
-document.querySelectorAll('[data-contact="viber"]').forEach(el => {
-  el.href = `viber://chat?number=%2B${CONTACT.viber}`;
-});
 
 /* Мобільне меню */
 const burger = document.getElementById('burger');

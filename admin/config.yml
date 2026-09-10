@@ -12,19 +12,46 @@ collections:
     label: "Сайт"
     files:
       - file: "content/site.json"
-        label: "Ціни, фото та відео"
+        label: "Налаштування сайту"
         name: "site"
         fields:
           - label: "Фото майстра"
             name: "master_photo"
             widget: "image"
             hint: "Найкраще квадратне фото, обличчя ближче до центру."
+
           - label: "Відео прикладу роботи"
             name: "portfolio_video"
             widget: "file"
             media_folder: "/video"
             public_folder: "/video"
             hint: "Короткий відеоролик (mp4) з прикладом виконаної роботи."
+
+          - label: "Контакти"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Телефон (для дзвінків, формат +380...)", name: "phone", widget: "string"}
+              - {label: "Телефон (як показувати текстом)", name: "phone_display", widget: "string"}
+              - {label: "Telegram (username без @)", name: "telegram", widget: "string"}
+              - {label: "Viber (номер цифрами, з кодом країни, без +)", name: "viber", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+
+          - label: "Майстер і тексти сайту"
+            name: "master"
+            widget: "object"
+            fields:
+              - {label: "Ім'я", name: "name", widget: "string"}
+              - {label: "Років досвіду (напр. '25+')", name: "experience_years", widget: "string"}
+              - {label: "Бейдж у шапці сайту (графік)", name: "hero_badge", widget: "string"}
+              - {label: "Вступний текст під головним заголовком", name: "hero_intro", widget: "text"}
+              - {label: "Опис про майстра (розділ «Ваш майстер»)", name: "bio", widget: "text"}
+              - {label: "Графік роботи (короткий рядок)", name: "schedule_line", widget: "string"}
+              - {label: "Текст на кнопці дзвінка", name: "call_button_text", widget: "string"}
+              - {label: "Текст у блоці «Переваги» (перша картка)", name: "advantage_text", widget: "text"}
+              - {label: "Текст у темному блоці-заклику", name: "cta_text", widget: "text"}
+              - {label: "Рядок з адресою/графіком у розділі «Контакти»", name: "location_line", widget: "string"}
+
           - label: "Ціни на послуги"
             name: "prices"
             widget: "list"
@@ -38,3 +65,19 @@ collections:
                 name: "items"
                 widget: "list"
                 field: {label: "Пункт", name: "item", widget: "string"}
+
+          - label: "Відгуки клієнтів"
+            name: "reviews"
+            widget: "list"
+            summary: "{{author}}"
+            fields:
+              - {label: "Текст відгуку", name: "text", widget: "text"}
+              - {label: "Автор (ім'я, район/місто)", name: "author", widget: "string"}
+
+          - label: "Часті запитання (FAQ)"
+            name: "faq"
+            widget: "list"
+            summary: "{{question}}"
+            fields:
+              - {label: "Питання", name: "question", widget: "string"}
+              - {label: "Відповідь", name: "answer", widget: "text"}
