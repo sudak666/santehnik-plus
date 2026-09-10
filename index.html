@@ -10,6 +10,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <meta name="theme-color" content="#0b6cf0">
+<script>
+  // Netlify Identity invite/recovery/confirmation links land here first —
+  // forward them to /admin/ (with the widget) so the password form appears.
+  if (/(invite_token|recovery_token|confirmation_token)=/.test(location.hash)) {
+    location.replace('/admin/' + location.hash);
+  }
+</script>
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Сантехнік Плюс">
